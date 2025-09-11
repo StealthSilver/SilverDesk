@@ -25,7 +25,7 @@ const featuredItems = [
 
 const Featured = () => {
   return (
-    <section className="bg-zinc-950 text-zinc-200 py-20 px-6">
+    <section className="bg-black text-zinc-200 py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-amber-200 mb-10 tracking-tight">
           Featured Writings
