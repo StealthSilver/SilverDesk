@@ -5,14 +5,14 @@ import { remark } from "remark";
 import html from "remark-html";
 import { notFound } from "next/navigation";
 
-export default async function EssayPage({
+export default async function PoemPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
 
-  const filePath = path.join(process.cwd(), "content/essays", `${slug}.md`);
+  const filePath = path.join(process.cwd(), "content/poems", `${slug}.md`);
 
   if (!fs.existsSync(filePath)) {
     return notFound();
