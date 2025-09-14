@@ -40,7 +40,7 @@ export default function RootLayout({
       lang="en"
       className={`${snippet.variable} ${parisienne.variable} ${palanquin.variable}`}
     >
-      <body className="bg-[#ecede8] text-zinc-900 antialiased">{children}</body>
+      <body className="bg-[#ecede8]  antialiased">{children}</body>
     </html>
   );
 }

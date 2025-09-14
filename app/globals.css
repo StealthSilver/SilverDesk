@@ -6,15 +6,18 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --font-maven-pro: "Maven Pro", sans-serif;
-  --font-poppins: "Poppins", sans-serif;
+body {
+  @apply antialiased font-sans;
 }
 
-.font-sans {
-  font-family: var(--font-maven-pro);
+.font-snippet {
+  font-family: var(--font-snippet), sans-serif;
 }
 
-.font-heading {
-  font-family: var(--font-poppins);
+.font-parisienne {
+  font-family: var(--font-parisienne), cursive;
+}
+
+.font-palanquin {
+  font-family: var(--font-palanquin), sans-serif;
 }

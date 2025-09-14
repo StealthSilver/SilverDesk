@@ -23,12 +23,16 @@ export default function PoemsPage() {
 
   return (
     <main className="min-h-screen bg-[#ecede8] text-[#21201f] relative">
-      {/* Navbar */}
       <Navbar />
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-[#e34e30] mb-10">Poems</h1>
+          <h1
+            className="text-3xl font-bold text-[#e34e30] mb-10"
+            style={{ fontFamily: "var(--font-snippet)" }}
+          >
+            Poems
+          </h1>
 
           <div className="grid md:grid-cols-2 gap-8">
             {poems.map((poem) => (
@@ -37,10 +41,16 @@ export default function PoemsPage() {
                 className="bg-white border border-zinc-300 rounded-xl p-6 shadow-md hover:shadow-lg hover:border-[#e34e30]/40 transition flex flex-col justify-between"
               >
                 <div>
-                  <h2 className="text-xl font-semibold text-[#21201f] mb-2">
+                  <h2
+                    className="text-xl font-semibold text-[#21201f] mb-2"
+                    style={{ fontFamily: "var(--font-parisienne)" }}
+                  >
                     {poem.title}
                   </h2>
-                  <p className="text-sm text-zinc-600 mb-6">
+                  <p
+                    className="text-sm text-zinc-600 mb-6"
+                    style={{ fontFamily: "var(--font-palanquin)" }}
+                  >
                     {poem.description}
                   </p>
                 </div>
@@ -56,7 +66,6 @@ export default function PoemsPage() {
         </div>
       </section>
 
-      {/* Sidebar */}
       <Sidebar />
     </main>
   );

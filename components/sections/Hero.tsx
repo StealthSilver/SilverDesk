@@ -5,8 +5,18 @@ const Hero = () => {
     <section className="flex flex-col h-screen relative text-[#e34e30]">
       <div className="flex-1 flex items-center justify-center px-6 text-center">
         <div className="max-w-4xl">
-          <h1 className="text-5xl font-bold">Welcome to Silver's Desk</h1>
-          <p className="mt-4 text-lg">A place for essays, stories & poems</p>
+          <h1
+            className="text-5xl font-bold"
+            style={{ fontFamily: "var(--font-snippet)" }}
+          >
+            Welcome to Silver's Desk
+          </h1>
+          <p
+            className="mt-4 text-lg"
+            style={{ fontFamily: "var(--font-snippet)" }}
+          >
+            A place for essays, stories & poems
+          </p>
         </div>
       </div>
 

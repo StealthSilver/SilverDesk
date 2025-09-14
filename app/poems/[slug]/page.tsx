@@ -27,16 +27,16 @@ export default async function PoemPage({
 
   return (
     <main className="relative min-h-screen bg-[#ecede8] text-[#21201f]">
-      {/* Sidebar */}
       <Sidebar />
 
       <article className="max-w-3xl mx-auto px-6 py-20">
-        {/* Title */}
-        <h1 className="text-5xl font-[var(--font-parisienne)] text-[#e34e30] mb-8 text-center leading-tight">
+        <h1
+          className="text-5xl  text-[#e34e30] mb-8 text-center leading-tight"
+          style={{ fontFamily: "var(--font-parisienne)" }}
+        >
           {data.title}
         </h1>
 
-        {/* Meta info */}
         <div className="text-sm text-zinc-600 mb-12 text-center font-light">
           <span>{data.date}</span>
           {data.tags && (
@@ -53,7 +53,6 @@ export default async function PoemPage({
           )}
         </div>
 
-        {/* Content */}
         <div
           className="prose prose-lg max-w-none font-[var(--font-palanquin)] leading-relaxed text-justify
                      prose-headings:font-bold prose-headings:text-[#21201f]
@@ -62,6 +61,7 @@ export default async function PoemPage({
                      prose-blockquote:bg-[#e34e30]/5 prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:rounded-md
                      prose-strong:text-[#e34e30]"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
+          style={{ fontFamily: "var(--font-palanquin)" }}
         />
       </article>
     </main>

@@ -27,7 +27,12 @@ export default function StoriesPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-[#e34e30] mb-10">Stories</h1>
+          <h1
+            className="text-3xl font-bold text-[#e34e30] mb-10"
+            style={{ fontFamily: "var(--font-snippet)" }}
+          >
+            Stories
+          </h1>
 
           <div className="grid md:grid-cols-2 gap-8">
             {stories.map((story) => (

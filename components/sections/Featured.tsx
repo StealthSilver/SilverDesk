@@ -48,7 +48,10 @@ const Featured = () => {
   return (
     <section className="text-[#21201f] px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#e34e30] mb-10 tracking-tight">
+        <h2
+          className="text-3xl font-bold text-[#e34e30] mb-10 tracking-tight"
+          style={{ fontFamily: "var(--font-snippet)" }}
+        >
           Featured Writings
         </h2>
 
@@ -59,13 +62,24 @@ const Featured = () => {
               className="bg-white/60 border border-zinc-300 rounded-2xl p-6 shadow-md hover:shadow-lg hover:border-[#e34e30]/40 transition flex flex-col justify-between"
             >
               <div>
-                <p className="text-sm text-[#e34e30] mb-2 uppercase tracking-wide">
+                <p
+                  className="text-sm text-[#e34e30] mb-2 uppercase tracking-wide"
+                  style={{ fontFamily: "var(--font-snippet)" }}
+                >
                   {item.category}
                 </p>
-                <h3 className="text-xl font-semibold text-[#21201f] mb-3 leading-snug">
+                <h3
+                  className="text-xl font-semibold text-[#21201f] mb-3 leading-snug"
+                  style={{ fontFamily: "var(--font-snippet)" }}
+                >
                   {item.title}
                 </h3>
-                <p className="text-sm text-zinc-600 mb-6">{item.description}</p>
+                <p
+                  className="text-sm text-zinc-600 mb-6"
+                  style={{ fontFamily: "var(--font-palanquin)" }}
+                >
+                  {item.description}
+                </p>
               </div>
               <Link
                 href={item.link}
