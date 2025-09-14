@@ -18,7 +18,10 @@ const Navbar = () => {
           />
         </Link>
 
-        <div className="flex gap-6 text-lg font-bold">
+        <div
+          className="flex gap-6 text-lg font-bold"
+          style={{ fontFamily: "var(--font-snippet)" }}
+        >
           <Link href="/essays" className="hover:text-[#e34e30] transition">
             Essays
           </Link>
