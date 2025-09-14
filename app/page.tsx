@@ -7,8 +7,15 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero />
-      <Featured />
+
+      <div className="relative">
+        <div className="absolute inset-0 bg-[url('/statue.png')] opacity-70 bg-cover bg-center pointer-events-none"></div>
+
+        <div className="relative">
+          <Hero />
+          {/* <Featured /> */}
+        </div>
+      </div>
       <Sidebar />
     </main>
   );

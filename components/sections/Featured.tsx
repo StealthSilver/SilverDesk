@@ -25,7 +25,7 @@ const featuredItems = [
 
 const Featured = () => {
   return (
-    <section className="bg-[#ecede8] text-[#21201f] py-20 px-6">
+    <section className="text-[#21201f] px-6">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-[#e34e30] mb-10 tracking-tight">
           Featured Writings
@@ -35,7 +35,7 @@ const Featured = () => {
           {featuredItems.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white border border-zinc-300 rounded-2xl p-6 shadow-md hover:shadow-lg hover:border-[#e34e30]/40 transition flex flex-col justify-between"
+              className="bg-white/60 border border-zinc-300 rounded-2xl p-6 shadow-md hover:shadow-lg hover:border-[#e34e30]/40 transition flex flex-col justify-between"
             >
               <div>
                 <p className="text-sm text-[#e34e30] mb-2 uppercase tracking-wide">

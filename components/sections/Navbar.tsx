@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="w-full border-b border-[#21201f] shadow-md font-[var(--font-snippet)]">
-      <div className="max-w-5xl mx-auto flex justify-between items-center py-4">
+    <nav className="fixed top-0 left-0 w-full border-b border-[#21201f]  font-[var(--font-snippet) z-50">
+      <div className="max-w-5xl mx-auto flex justify-between items-center py-4 px-6">
         <Link href="/" className="transition hover:opacity-80">
           <Image
             src="/logo.svg"
