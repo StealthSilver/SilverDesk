@@ -1,8 +1,6 @@
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Sidebar from "@/components/sections/Sidebar";
-import Featured from "@/components/sections/Featured";
-
 export default function Home() {
   return (
     <main>
@@ -13,7 +11,6 @@ export default function Home() {
 
         <div className="relative">
           <Hero />
-          {/* <Featured /> */}
         </div>
       </div>
       <Sidebar />
