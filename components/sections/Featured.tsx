@@ -1,29 +1,51 @@
-import React from "react";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import Link from "next/link";
 
-const featuredItems = [
-  {
-    title: "The Essence of Quiet Thinking",
-    category: "Essay",
-    description:
-      "Exploring the art of slowing down in a world of endless motion.",
-    link: "/essays/quiet-thinking",
-  },
-  {
-    title: "The River Beyond the Hills",
-    category: "Story",
-    description: "A tale of memory, longing, and rediscovery.",
-    link: "/stories/river-beyond",
-  },
-  {
-    title: "Ashes of Tomorrow",
-    category: "Poem",
-    description: "Verses born from silence and subtle flame.",
-    link: "/poems/ashes-of-tomorrow",
-  },
-];
+function getFeaturedContent() {
+  const baseDir = path.join(process.cwd(), "content");
 
+  // Define folders and display names
+  const sections: { folder: string; display: string }[] = [
+    { folder: "essays", display: "Essay" },
+    { folder: "poems", display: "Poem" },
+    { folder: "stories", display: "Story" },
+  ];
+
+  const items: {
+    title: string;
+    description: string;
+    category: string;
+    link: string;
+  }[] = [];
+
+  sections.forEach(({ folder, display }) => {
+    const dir = path.join(baseDir, folder);
+
+    if (fs.existsSync(dir)) {
+      const files = fs.readdirSync(dir);
+
+      files.forEach((filename) => {
+        const filePath = path.join(dir, filename);
+        const fileContent = fs.readFileSync(filePath, "utf-8");
+        const { data } = matter(fileContent);
+
+        items.push({
+          title: data.title || "Untitled",
+          description: data.description || "",
+          category: data.category || display, // use proper display name
+          link: `/${folder}/${filename.replace(/\.md$/, "")}`,
+        });
+      });
+    }
+  });
+
+  return items.slice(0, 3);
+}
 const Featured = () => {
+  const featuredItems = getFeaturedContent();
+
   return (
     <section className="text-[#21201f] px-6">
       <div className="max-w-5xl mx-auto">
