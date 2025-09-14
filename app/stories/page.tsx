@@ -41,16 +41,23 @@ export default function StoriesPage() {
                 className="bg-white border border-zinc-300 rounded-xl p-6 shadow-md hover:shadow-lg hover:border-[#e34e30]/40 transition flex flex-col justify-between"
               >
                 <div>
-                  <h2 className="text-xl font-semibold text-[#21201f] mb-2">
+                  <h2
+                    className="text-xl font-semibold text-[#21201f] mb-2"
+                    style={{ fontFamily: "var(--font-snippet)" }}
+                  >
                     {story.title}
                   </h2>
-                  <p className="text-sm text-zinc-600 mb-6">
+                  <p
+                    className="text-sm text-zinc-600 mb-6"
+                    style={{ fontFamily: "var(--font-palanquin)" }}
+                  >
                     {story.description}
                   </p>
                 </div>
                 <Link
                   href={`/stories/${story.slug}`}
                   className="text-[#e34e30] hover:opacity-80 font-medium text-sm transition mt-auto"
+                  style={{ fontFamily: "var(--font-snippet)" }}
                 >
                   Read More →
                 </Link>

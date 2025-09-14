@@ -30,7 +30,10 @@ export default async function BookPage({
       <Sidebar />
 
       <article className="max-w-3xl mx-auto px-6 py-20">
-        <h1 className="text-5xl font-[var(--font-parisienne)] text-[#e34e30] mb-8 text-center leading-tight">
+        <h1
+          className="text-5xl font-[var(--font-parisienne)] text-[#e34e30] mb-8 text-center leading-tight"
+          style={{ fontFamily: "var(--font-snippet)" }}
+        >
           {data.title}
         </h1>
 
@@ -59,6 +62,7 @@ export default async function BookPage({
                      prose-blockquote:bg-[#e34e30]/5 prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:rounded-md
                      prose-strong:text-[#e34e30]"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
+          style={{ fontFamily: "var(--font-palanquin)" }}
         />
       </article>
     </main>
