@@ -84,6 +84,7 @@ const Featured = () => {
               <Link
                 href={item.link}
                 className="text-[#e34e30] hover:opacity-80 font-medium text-sm transition mt-auto"
+                style={{ fontFamily: "var(--font-snippet)" }}
               >
                 Read More →
               </Link>
