@@ -11,7 +11,7 @@ export default async function EssayPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // ✅ correctly awaited
+  const { slug } = await params;
 
   const filePath = path.join(process.cwd(), "content/essays", `${slug}.md`);
 
@@ -27,16 +27,13 @@ export default async function EssayPage({
 
   return (
     <main className="relative min-h-screen bg-[#ecede8] text-[#21201f]">
-      {/* Sidebar always visible */}
       <Sidebar />
 
       <article className="max-w-3xl mx-auto px-6 py-20">
-        {/* Title */}
         <h1 className="text-5xl font-[var(--font-parisienne)] text-[#e34e30] mb-8 text-center leading-tight">
           {data.title}
         </h1>
 
-        {/* Meta info */}
         <div className="text-sm text-zinc-600 mb-12 text-center font-light">
           <span>{data.date}</span>
           {data.tags && (
@@ -53,7 +50,6 @@ export default async function EssayPage({
           )}
         </div>
 
-        {/* Content */}
         <div
           className="prose prose-lg max-w-none font-[var(--font-palanquin)] leading-relaxed text-justify prose-headings:font-bold prose-headings:text-[#21201f] prose-p:mb-6 prose-p:text-lg prose-p:leading-8 prose-blockquote:italic prose-blockquote:border-l-4 prose-blockquote:border-[#e34e30] prose-blockquote:bg-[#e34e30]/5 prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:rounded-md prose-strong:text-[#e34e30]"
           dangerouslySetInnerHTML={{ __html: contentHtml }}

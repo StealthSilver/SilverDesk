@@ -6,7 +6,6 @@ import Link from "next/link";
 function getFeaturedContent() {
   const baseDir = path.join(process.cwd(), "content");
 
-  // Define folders and display names
   const sections: { folder: string; display: string }[] = [
     { folder: "essays", display: "Essay" },
     { folder: "poems", display: "Poem" },
@@ -34,7 +33,7 @@ function getFeaturedContent() {
         items.push({
           title: data.title || "Untitled",
           description: data.description || "",
-          category: data.category || display, // use proper display name
+          category: data.category || display,
           link: `/${folder}/${filename.replace(/\.md$/, "")}`,
         });
       });
