@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Merriweather } from "next/font/google";
+import { Snippet, Parisienne, Palanquin } from "next/font/google";
 import siteData from "../data";
 
-const inter = Inter({
+const snippet = Snippet({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
+  weight: ["400"],
+  variable: "--font-snippet",
 });
 
-const merriweather = Merriweather({
+const parisienne = Parisienne({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-merriweather",
+  weight: ["400"],
+  variable: "--font-parisienne",
+});
+
+const palanquin = Palanquin({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-palanquin",
 });
 
 export const metadata: Metadata = {
@@ -30,8 +36,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
-      <body className="bg-black text-zinc-200 antialiased">{children}</body>
+    <html
+      lang="en"
+      className={`${snippet.variable} ${parisienne.variable} ${palanquin.variable}`}
+    >
+      <body className="bg-[#ecede8] text-zinc-900 antialiased">{children}</body>
     </html>
   );
 }

@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="w-full border-b shadow-md">
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <nav className="w-full border-b border-[#21201f] shadow-md font-[var(--font-snippet)]">
+      <div className="max-w-5xl mx-auto flex justify-between items-center py-4">
         <Link href="/" className="transition hover:opacity-80">
           <Image
             src="/logo.svg"
@@ -18,17 +18,17 @@ const Navbar = () => {
           />
         </Link>
 
-        <div className="flex gap-6 text-lg">
-          <Link href="/essays" className="hover:text-amber-400 transition">
+        <div className="flex gap-6 text-lg font-bold">
+          <Link href="/essays" className="hover:text-[#e34e30] transition">
             Essays
           </Link>
-          <Link href="/stories" className="hover:text-amber-400 transition">
+          <Link href="/stories" className="hover:text-[#e34e30] transition">
             Stories
           </Link>
-          <Link href="/poems" className="hover:text-amber-400 transition">
+          <Link href="/poems" className="hover:text-[#e34e30] transition">
             Poems
           </Link>
-          <Link href="/books" className="hover:text-amber-400 transition">
+          <Link href="/books" className="hover:text-[#e34e30] transition">
             Books
           </Link>
         </div>

@@ -25,9 +25,9 @@ const featuredItems = [
 
 const Featured = () => {
   return (
-    <section className="bg-black text-zinc-200 py-20 px-6">
+    <section className="bg-[#ecede8] text-[#21201f] py-20 px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-amber-200 mb-10 tracking-tight">
+        <h2 className="text-3xl font-bold text-[#e34e30] mb-10 tracking-tight">
           Featured Writings
         </h2>
 
@@ -35,18 +35,20 @@ const Featured = () => {
           {featuredItems.map((item, idx) => (
             <div
               key={idx}
-              className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-md hover:shadow-lg hover:border-amber-400/30 transition"
+              className="bg-white border border-zinc-300 rounded-2xl p-6 shadow-md hover:shadow-lg hover:border-[#e34e30]/40 transition flex flex-col justify-between"
             >
-              <p className="text-sm text-amber-400 mb-2 uppercase tracking-wide">
-                {item.category}
-              </p>
-              <h3 className="text-xl font-semibold text-zinc-100 mb-3 leading-snug">
-                {item.title}
-              </h3>
-              <p className="text-sm text-zinc-400 mb-6">{item.description}</p>
+              <div>
+                <p className="text-sm text-[#e34e30] mb-2 uppercase tracking-wide">
+                  {item.category}
+                </p>
+                <h3 className="text-xl font-semibold text-[#21201f] mb-3 leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-zinc-600 mb-6">{item.description}</p>
+              </div>
               <Link
                 href={item.link}
-                className="text-amber-300 hover:text-amber-400 font-medium text-sm transition"
+                className="text-[#e34e30] hover:opacity-80 font-medium text-sm transition mt-auto"
               >
                 Read More →
               </Link>
